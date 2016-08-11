@@ -1,13 +1,32 @@
 grocery_list = ["carrots", "toilet paper", "apples", "salmon"]
 
-grocery_list << "rice" #adds rice to list
 
-grocery_list.each do |list| #creates a method to iterate over the list
 
-  puts "* #{list}" #putses list with an asterix to begin each line
+def show_list(list) #creates a method
+  list.each do |item| #iterates over the list
+
+    puts "* #{item}" #putses list with an asterix to begin each line
+
+  end
 end
 
+show_list(grocery_list)
+
+
+puts " "
+
+
+show_list(grocery_list << "rice") #adds rice to list
+
+
+puts " "
+
+
 puts "You have #{grocery_list.count} items on your list." #putses number of items in list
+
+
+puts " "
+
 
 if grocery_list.include? ("bananas") #conditional putsing whether or not you need bananas.
     puts "You don't need more bananas."
@@ -15,6 +34,16 @@ if grocery_list.include? ("bananas") #conditional putsing whether or not you nee
     puts "Don't forget to pick up bananas."
 end
 
+
+puts " "
+
+
 puts "The second item on your list is #{grocery_list[1]}." #Displays second item on list
 
-puts grocery_list.sort
+
+puts " "
+
+
+grocery_list = grocery_list.sort #sorts list alphabetically
+puts "Your list sorted alphabetically is:"
+show_list(grocery_list) #redisplays list sorted alphabetically
