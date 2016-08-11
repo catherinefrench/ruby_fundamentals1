@@ -47,3 +47,10 @@ puts " "
 grocery_list = grocery_list.sort #sorts list alphabetically
 puts "Your list sorted alphabetically is:"
 show_list(grocery_list) #redisplays list sorted alphabetically
+
+
+puts " "
+
+grocery_list.delete("salmon") #deletes salmon from the list
+puts "Your list with salmon removed is: "
+show_list(grocery_list)
